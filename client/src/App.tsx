@@ -1,14 +1,21 @@
+import { Link, Outlet } from "react-router";
 import "./App.css";
 
 function App() {
   return (
     <>
       <header>
-        <h1 className="logo">JS Monorepo</h1>
+        <h1 className="logo">Wild Series</h1>
       </header>
 
       <nav className="navbar">
         <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/programs">Programs</Link>
+          </li>
           <li>
             <a
               href="https://github.com/WildCodeSchool/create-js-monorepo"
@@ -35,13 +42,7 @@ function App() {
         </ul>
       </nav>
 
-      <main className="text-box">
-        <hgroup className="block-primary">
-          <h2 className="block-primary-main">JS Monorepo</h2>
-          <p className="block-primary-sub">Votre framework JavaScript</p>
-        </hgroup>
-        <p>Vous avez lu le README ?</p>
-      </main>
+      <Outlet />
 
       <footer>
         Développé par la&nbsp;

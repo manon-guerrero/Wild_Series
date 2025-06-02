@@ -8,9 +8,6 @@ import "../database/checkConnection";
 
 // Import the Express application from ./app
 import app from "./app";
-app.get("/", (req, res) => {
-  res.send("welcome to wild series");
-});
 
 // Get the port from the environment variables
 const port = process.env.APP_PORT;
